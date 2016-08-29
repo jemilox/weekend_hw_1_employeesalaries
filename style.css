@@ -3,11 +3,46 @@ h1 {
 }
 
 div {
-  background-color: white;
   margin-left: 5%;
   margin-top: 2%;
-  
+
 }
 header, body {
   background: lightgrey;
+  margin-left: 1em;
+}
+
+p {
+  background-color: white;
+  width: 40%;
+  padding: 1em;
+
+}
+h2 {
+margin: 0;
+padding: 0;
+display: inline;
+margin-right: .5em;
+}
+
+div {
+  margin: 1em 0 .5em .25em;
+  padding: 0;
+}
+
+#totalSalary {
+  margin-bottom: 1em;
+}
+
+}
+header {
+  margin-bottom: 1em;
+}
+
+#inputs {
+  margin-left: 1em;
+}
+
+#showInfo {
+  margin-left: 2em;
 }

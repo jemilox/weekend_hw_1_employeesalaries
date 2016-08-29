@@ -13,7 +13,7 @@ var newEmployee = {
   lName : document.getElementById("lNameIn").value,
   id : document.getElementById("idIn").value,
   jobTitle : document.getElementById("jobTitleIn").value,
-  annualSalary : document.getElementById("annualSalaryIn").value
+  annualSalary : Number(document.getElementById("annualSalaryIn").value)
 };
 
 //clear all text input
@@ -35,18 +35,28 @@ console.log(employees);
 document.getElementById('showInfo').innerHTML = "";
 //add employees
 for (var i = 0; i < employees.length; i++) {
-
-var allEmployees = "Employee Name: " + employees[i].fName + " " + employees[i].lName + "<br>"
+//add employee to Dom
+var allEmployees = "<p>" + "Employee Name: " + employees[i].fName + " " + employees[i].lName + "<br>"
                   + "ID: " + employees[i].id + "<br>" +
                   "Job Title: " + employees[i].jobTitle + "<br>" +
-                  "Annual Salary: " + employees[i].annualSalary +
+                  "Annual Salary: " + employees[i].annualSalary + "<br>" + "</p>";
                   "<button onClick="
 
 document.getElementById('showInfo').innerHTML += allEmployees;
 
-
+//compute total Salary
 totalSalary += employees[i].annualSalary;
+//convert to currency
+totalSalary = totalSalary.toLocaleString('USD', {style: 'currency', currency: 'USD'});
+
 console.log(totalSalary);
+
+//clear totalSalary on Dom
+document.getElementById('totalSalary').innerHTML = '';
+
+//add total Salary on Dom
+document.getElementById('totalSalary').innerHTML = totalSalary
+
 }
 
 }; //end newEmployee

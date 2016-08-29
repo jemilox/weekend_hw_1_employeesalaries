@@ -8,17 +8,22 @@
   </head>
   <header>
     <h1>CONFIDENTIAL: DO NOT PRINT, EMAIL, OR COPY</h1>
-    <h2>Employee Salary Page</h2>
-    <h2 id="totalSalary">Total Salary:</h2>
+    <div>
+      <h2>Employee Salary Page</h2><br>
+    </div>
+    <div>
+      <h2>Total Salary:</h2><h2 id="totalSalary"></h2>
+    </div>
   </header>
   <body>
-    <input id="fNameIn" type="text" placeholder="First Name">
-    <input id="lNameIn" type="text" placeholder="Last Name">
-    <input id="idIn" type="text" placeholder="Employee ID">
-    <input id="jobTitleIn" type="text" placeholder="Job Title">
-    <input id="annualSalaryIn" type="text" placeholder="Annual Salary">
-    <button onClick="getEmployeeInfo()">Submit</button>
-
+    <div id="inputs">
+      <input id="fNameIn" type="text" placeholder="First Name">
+      <input id="lNameIn" type="text" placeholder="Last Name">
+      <input id="idIn" type="text" placeholder="Employee ID">
+      <input id="jobTitleIn" type="text" placeholder="Job Title">
+      <input id="annualSalaryIn" type="text" placeholder="Annual Salary">
+      <button onClick="getEmployeeInfo()">Submit</button>
+    </div>
     <div id="showInfo">
     </div>
 
